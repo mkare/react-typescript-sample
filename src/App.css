@@ -40,3 +40,42 @@
 .read-the-docs {
   color: #888;
 }
+
+.login-form {
+  display: grid;
+  gap: 1em;
+  justify-items: end;
+  max-width: 20em;
+  margin: 2rem auto;
+}
+
+.form-element {
+  display: grid;
+  gap: 0.5em;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+}
+
+.form-element label {
+  text-align: right;
+  font-style: italic;
+  font-size: 0.8em;
+}
+
+.form-element input {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+}
+
+.form-element input:focus {
+  border-color: #646cff;
+}
+
+.login-form .button {
+  align-self: center;
+}
