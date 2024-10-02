@@ -18,7 +18,12 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+
+    "baseUrl": ".", // Kök dizin (./) olarak ayarladık
+    "paths": {
+      "@/*": ["src/*"] // Alias'ları buraya da ekledik
+    }
   },
   "include": ["src"]
 }
