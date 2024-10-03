@@ -3,25 +3,24 @@ import BookInfo from "@/components/BookInfo";
 import CourseInfo from "@/components/CourseInfo";
 import FeaturedBookInfo from "@/components/FeaturedBookInfo";
 import HighlightedBookInfo from "@/components/HighlightedBookInfo";
-import Button from "@/components/Button";
-import { Link } from "react-router-dom";
+import Box from "@/components/Box";
+import TodoList from "@/components/TodoList";
+import Counter from "@/components/Counter";
 
 const Home: React.FC = () => {
   return (
-    <div>
+    <Box>
       <CourseInfo courseName="React">
-        <p>
-          <b>React</b> is a JavaScript library for building user interfaces.
+        <Box as="p" className="paragraph">
+          <b>React</b> is a JavaScript library for building user interfaces.{" "}
           <br />
-          <a href="https://reactjs.org/">React documentation</a>,{" "}
-          <a href="https://reactjs.org/tutorial/tutorial.html">
-            React tutorial
-          </a>{" "}
-          React and TypeScript are a match made in heaven.
-        </p>
+          <Box as="a" href="https://reactjs.org/" className="link me-2">
+            React documentation
+          </Box>
+          <span>React and TypeScript are a match made in heaven.</span>
+        </Box>
       </CourseInfo>
-
-      <BookInfo name="The Great Gatsby" author="F. Scott Fitzgerald" />
+      <BookInfo name="Moby Dick" author="Herman Melville" />
       <FeaturedBookInfo
         themeColor="#6F1E51"
         title="The Catcher in the Rye by J.D. Salinger"
@@ -31,10 +30,10 @@ const Home: React.FC = () => {
         name="The Catcher in the Rye"
         author="J.D. Salinger"
       />
-      <Link to="/login">
-        <Button>Go to Login page</Button>
-      </Link>
-    </div>
+
+      <TodoList />
+      <Counter />
+    </Box>
   );
 };
 

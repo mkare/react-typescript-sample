@@ -1,13 +1,14 @@
-import { ComponentProps, forwardRef } from "react";
+import { ComponentProps, forwardRef, MouseEventHandler } from "react";
 import Icon, { IconName } from "./Icon";
 
 type Props = {
   icon?: IconName;
   iconPosition?: "start" | "end";
+  onClick?: MouseEventHandler<HTMLButtonElement>;
 } & ComponentProps<"button">;
 
 const Button = forwardRef<HTMLButtonElement, Props>(
-  ({ icon, iconPosition = "start", children, ...props }, ref) => {
+  ({ icon, iconPosition = "start", onClick, children, ...props }, ref) => {
     const renderIcon = icon ? <Icon name={icon} size={24} /> : null;
 
     const renderClassname = () => {
@@ -17,7 +18,12 @@ const Button = forwardRef<HTMLButtonElement, Props>(
     };
 
     return (
-      <button ref={ref} {...props} className={renderClassname()}>
+      <button
+        ref={ref}
+        className={renderClassname()}
+        onClick={onClick}
+        {...props}
+      >
         {iconPosition === "start" && renderIcon}
         <span>{children}</span>
         {iconPosition === "end" && renderIcon}

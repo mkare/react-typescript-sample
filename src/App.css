@@ -79,3 +79,47 @@
 .login-form .button {
   align-self: center;
 }
+
+.todo-list {
+  display: grid;
+  gap: 1.1em;
+  list-style: none;
+  padding: 0;
+  margin-block: 2.5rem;
+}
+
+.todo-list input[type="checkbox"] {
+  display: none;
+}
+
+.todo-list label {
+  padding: 0.5em 1em;
+  border-radius: 8px;
+  background-color: #1a1a1a;
+  cursor: pointer;
+}
+
+.todo-list label:hover {
+  background-color: #2a2a2a;
+}
+
+.todo-list input[type="checkbox"]:checked + label {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.counter {
+  color: #888;
+  margin-block: 2rem;
+}
+
+.counter p {
+  margin: 0;
+}
+
+.counter div {
+  display: inline-flex;
+  gap: 0.5em;
+  padding: 0.5em 1em;
+  border-radius: 8px;
+}
