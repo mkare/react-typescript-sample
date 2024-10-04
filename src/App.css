@@ -50,9 +50,9 @@
 }
 
 .form-element {
-  display: grid;
-  gap: 0.5em;
-  grid-template-columns: 1fr auto;
+  display: flex;
+  gap: 1em;
+  justify-content: center;
   align-items: center;
 }
 
@@ -62,7 +62,8 @@
   font-size: 0.8em;
 }
 
-.form-element input {
+.form-element input,
+.form-element select {
   border-radius: 8px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
@@ -72,7 +73,8 @@
   background-color: #1a1a1a;
 }
 
-.form-element input:focus {
+.form-element input:focus,
+.form-element select:focus {
   border-color: #646cff;
 }
 

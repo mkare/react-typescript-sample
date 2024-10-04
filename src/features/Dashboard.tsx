@@ -1,5 +1,5 @@
 import { PropsWithChildren } from "react";
-import { DashboardProps } from "../types/types";
+import { DashboardProps } from "@/types/types";
 
 export default function Dashboard({
   title,
